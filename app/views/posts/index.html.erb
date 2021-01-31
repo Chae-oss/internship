@@ -1,0 +1,8 @@
+<ul>
+<% @posts.each do |p| %>
+<li><%= p.title %></li>
+<div style='width: 600px; padding-bottom: 30px'>
+<%= p.content %>
+</div>
+<% end %>
+</ul>
