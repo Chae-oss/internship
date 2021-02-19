@@ -4,4 +4,10 @@ Rails.application.routes.draw do
   root to: 'posts#index'
   
   get 'posts' => 'posts#index'
+  get 'posts/new' => 'posts#new'
+  get 'posts/:id' => 'posts#show', as: 'post'
+  post 'posts' => 'posts#create'
+
+
+  delete 'posts/:id' => 'posts#destroy'
 end

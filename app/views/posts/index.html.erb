@@ -1,8 +1,15 @@
-<ul>
-<% @posts.each do |p| %>
-<li><%= p.title %></li>
-<div style='width: 600px; padding-bottom: 30px'>
-<%= p.content %>
-</div>
+
+<% @posts.each do |post| %>
+    <section class="event">
+        <div class="summary">
+            <h2><%= link_to post.title, post_path(post)%></h2>
+            <p>
+                <%= truncate(post.content, length: 35, seperator: ' ') %>
+            </p>
+            <h3> <%= post.user_handle %>
+        </div>
+    </section>
 <% end %>
-</ul>
+<section>
+        <%= link_to "Create New Post", posts_new_path%>
+</section>
