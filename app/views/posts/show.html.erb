@@ -1,5 +1,5 @@
-<section class="post-details">
-    <div class="details">
+<section>
+    <div>
         <h1><%= @post.title %></h1>
         <p>
             <%= @post.content%>
@@ -8,7 +8,7 @@
 
 
 </section>
-<section class="admin">
+<section>
     <%= link_to "Delete", @post, method: :delete, data: {confirm: "Are you sure you want to delete this?"} %>
-
+    <%= link_to "Edit", edit_post_path(@post) %>
 </section>
