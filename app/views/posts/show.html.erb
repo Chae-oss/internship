@@ -12,3 +12,11 @@
     <%= link_to "Delete", @post, method: :delete, data: {confirm: "Are you sure you want to delete this?"} %>
     <%= link_to "Edit", edit_post_path(@post) %>
 </section>
+<h1> Comments </h1>
+<ul>
+    <% @post.comments.each do |c| %>
+        <li>
+            <%= c.content %>
+        </li>
+    <% end %>
+</ul>

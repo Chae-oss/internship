@@ -1,0 +1,10 @@
+<%= form_with(model: @post, local: true, method: :get) do |f| %>
+    <div>
+    <%= f.label "Search by User Handle" %>
+    </div>
+
+    <div>
+    <%= f.search_field(:user_handle, autofocus: true) %>
+    </div>
+    <%= f.submit %>
+<% end %>
